@@ -5,19 +5,24 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js",
+    "lint": "eslint",
     "test": "NODE_ENV=test mocha --timeout 10000"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.2.0",
+    "eslint": "^5.8.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
     "mocha": "^5.2.0",
     "nodemon": "^1.18.5",
     "supertest": "^3.3.0"
   },
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.4",
-    "nodemon": "^1.18.5",
-    "mongoose": "^5.3.9"
+    "mongoose": "^5.3.9",
+    "nodemon": "^1.18.5"
   }
 }

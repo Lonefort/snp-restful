@@ -1,7 +1,6 @@
-'use strict';
-module.exports = function(app) {
-  var snpList = require('../controllers/snpController');
+const snpList = require('../controllers/snpController');
 
+module.exports = (app) => {
   // snpList Routes
   app.route('/orders')
     .get(snpList.list_all_orders)

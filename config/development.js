@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = {
   env: 'development',
   db: 'mongodb://localhost/SNPdb',

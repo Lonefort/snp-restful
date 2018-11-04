@@ -1,25 +1,18 @@
-'use strict';
+const mongoose = require('mongoose');
 
+const Order = mongoose.model('Orders');
 
-var mongoose = require('mongoose'),
-Order = mongoose.model('Orders');
-
-exports.list_all_orders = function(req, res) {
-  Order.find({}, function(err, order) {
-    if (err)
-      res.send(err);
+exports.list_all_orders = (req, res) => {
+  Order.find({}, (err, order) => {
+    if (err) res.send(err);
     res.json(order);
   });
 };
 
-
-
-
-exports.create_a_order = function(req, res) {
-  var new_order = new Order(req.body);
-  new_order.save(function(err, order) {
-    if (err)
-      res.send(err);
+exports.create_a_order = (req, res) => {
+  const newOrder = new Order(req.body);
+  newOrder.save((err, order) => {
+    if (err) res.send(err);
     res.json(order);
   });
 };
