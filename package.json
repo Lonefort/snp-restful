@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "express": "^4.16.4",
+    "nodemon": "^1.18.5",
     "mongoose": "^5.3.9"
   }
 }
